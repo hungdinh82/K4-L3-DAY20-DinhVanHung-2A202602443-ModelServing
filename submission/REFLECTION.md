@@ -46,16 +46,17 @@ binary prebuilt của lab.
 
 | Quantization | Size (GB) | Load (ms) | TTFT P50/P95 (ms) | TPOT P50/P95 (ms) | E2E P50/P95/P99 (ms) | Decode (tok/s) |
 |---|--:|--:|--:|--:|--:|--:|
-| Q4_K_M | 0.50 | 2111 | 67 / 248 | 9.6 / 10.2 | 675 / 716 / 716 | 103.8 |
-| UD-Q2_K_XL | 0.39 | 2074 | 65 / 69 | 9.8 / 10.1 | 674 / 703 / 703 | 101.8 |
+| Q4_K_M | 0.50 | 1078 | 63 / 78 | 10.8 / 12.4 | 740 / 858 / 858 | 92.6 |
+| UD-Q2_K_XL | 0.39 | 1044 | 65 / 84 | 9.1 / 11.2 | 636 / 791 / 791 | 110.2 |
 
 **Quan sát** (≤ 60 chữ): 2-bit nhanh hơn bao nhiêu, và **có đáng không**? Bạn đã thử
 hỏi cùng một câu trên cả hai (`make serve` vs `.venv/bin/python labs/02-serve/serve.py --compare`)
 chưa? Chất lượng khác nhau thế nào?
 
-Q2 nhỏ hơn 0.11 GB (22%) nhưng decode chậm hơn khoảng 2%: 101.8 so với 103.8 tok/s.
-Tôi hỏi cùng một câu Goodput@SLO trên cả hai bản và cả hai đều trả lời đúng trọng tâm.
-Vì Q2 không đem lại speedup trên M1 Pro, tôi chọn Q4 trừ khi cần tiết kiệm dung lượng.
+Q2 nhỏ hơn 0.11 GB (22%) và ở lần chạy này decode nhanh hơn 1.19×: 110.2 so với 92.6
+tok/s. Tôi hỏi cùng một câu Goodput@SLO trên cả hai bản và cả hai đều trả lời đúng
+trọng tâm. Vì vậy ở lần đo này Q2 là lựa chọn tốt hơn về latency và dung lượng; chênh
+lệch với lần đo trước cho thấy cần xem benchmark ngắn như một snapshot có biến thiên.
 
 ---
 
