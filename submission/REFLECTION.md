@@ -6,10 +6,10 @@
 >
 > `make verify` sẽ fail nếu còn placeholder chưa điền. Đó là cố ý.
 
-**Họ Tên:** _<Họ Tên>_
-**MSSV:** _<MSSV>_
-**Cohort:** _<A20-K1 / A20-K2 / ...>_
-**Ngày submit:** _<YYYY-MM-DD>_
+**Họ Tên:** Đinh Văn Hùng
+**MSSV:** 2A202602443
+**Cohort:** A20-K2
+**Ngày submit:** 2026-10-06
 
 ---
 
@@ -185,4 +185,6 @@ xem được → 0 điểm.
 
 ## 9. Khai báo sử dụng AI  *(xem `docs/RULES.md` §3)*
 
-_(Công cụ nào, dùng vào việc gì. Ghi "Không dùng" nếu không dùng.)_
+Codex được dùng để đọc hiểu repo, chạy các lệnh setup/probe và hỗ trợ theo dõi tiến
+trình thực hiện lab. Các số liệu benchmark, load test và kết luận trong báo cáo chỉ
+được điền từ output chạy thật trên máy.
